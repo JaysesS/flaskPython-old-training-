@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type=text/javascript src="{{ url_for('static', filename='js/jquery-2.2.2.min.js') }}"></script>
+    <script type=text/javascript src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <script>
+        
+    </script>
+
+    <h4>Тут всякое баловство с формами и с ajax</h4>
+    <form action="/getSize" method="post" name="formLen" id="formLen">
+        <label>Узнать длину текста </label>
+        <input id="letters" name="letters" type="text" width="100">
+        <input type="button" class="btnLen" value="Отправить" onclick="getSize();">
+    </form>
+
+    <div id="len">К примеру введи - "Привет" и ответ будет 6 </div>
+
+    <form action="/generate" method="post" name="formGenerate" id="formGenerate">
+        <label>Сгенерировать число в диапазоне </label>
+        <input id="numbers" name="numbers" type="text">
+        <input type="button" value="Сгенерировать" onclick="generate();">
+    </form>
+
+    <div id="number">К примеру введи - "1,5" и получишь число к примеру 3 </div>
+
+    <div>
+        <div>
+            <h4>
+                Тут считается md5 рандомной строки и раз в 2 секунды дополняется на странице по мере выполнения.
+            </h4>
+            <h4>
+                Всего генерируется 15 слов, а значит и 15 хешей будет. 
+                Автоматический закончит работу чекер через 60 секунд.
+            </h4>
+        </div>
+        <div id="timeCon">
+            <p>Прошло времени со старта:</p>
+            <p id="time">0</p>
+        </div>
+        <div id="check">
+            
+        </div>
+    </div>
+
+</body>
+</html>

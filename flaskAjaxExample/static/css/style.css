@@ -1,0 +1,50 @@
+body {
+	margin: 10;
+	padding: 10;
+	font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input[type = "text"] {
+	width: 150px;
+	height: 15px;
+}
+
+input[type="text"]:focus {
+  color: green;
+}
+
+input[type = "button"] {
+	width: 150px;
+	height: 30px;
+}
+
+input[type="button"]:focus {
+  color: green;
+}
+
+#len {
+	padding: 10px;
+	color: green;
+}
+
+#number {
+	padding: 10px;
+	color: green;
+}
+
+#timeCon{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: space-between;
+    align-items: flex-start;
+}
+
+#time {
+	margin-left: 10px;
+}
+
+#hash{
+	color: green;
+}
