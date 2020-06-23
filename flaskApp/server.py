@@ -1,10 +1,6 @@
 # python3
 # flask
 
-import sys, os
-
-sys.path.append(os.path.expandvars("$ALG_PY3_LIBS"))
-
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('-port',  '--port', nargs="?", help='Server port')
