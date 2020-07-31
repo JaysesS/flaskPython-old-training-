@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Sign in
+{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/forms.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/const.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Login</h1>
+        <form class = "form-signup" action="/signin" method="POST">
+            {{ signin.hidden_tag() }}
+            {{ wtf.form_field(signin.username) }}
+            {{ wtf.form_field(signin.password) }}
+            {{ wtf.form_field(signin.remember) }}
+            {{ wtf.form_field(signin.submit, class = "btn btn-success") }}
+        </form>
+        {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-warning text-center" id="alertIncorrect">
+                            <strong>{{ message }}</strong>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        <div>
+            <a href="/">Go to index -></a>
+            <a href="/signup">Go to signup -></a>
+        </div>
+        
+    </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-signup {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+#alertIncorrect {
+    margin-top: 15px;
+    height: 35px;
+    background-color: rgba(202, 72, 72, 0.75);
+    border-color: #c5130d;
+    color: white;
+    line-height: 5px;
+}
